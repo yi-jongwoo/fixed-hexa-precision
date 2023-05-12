@@ -42,10 +42,11 @@ void m_times(ui* r,ui* x,ui* y){
 }
 void m_div(ui* r,ui* x,ui* y){ // *r <-> *y
 	ui t[NM*2]={0};
-	for(int i=0;i<NM;i++)
-		r[i]=0;
+	
 	for(int i=0;i<NM;i++)
 		t[i+N-M]=x[i]; // assert that doesnt exceed 1e64
+	for(int i=0;i<NM;i++)
+		r[i]=0;
 	for(int i=NM*32-1;i>=0;i--){
 		for(int j=NM*2-1;j>=0;j--){
 			t[j]<<=1;
